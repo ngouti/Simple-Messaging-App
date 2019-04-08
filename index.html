@@ -24,7 +24,19 @@
 
 <script>
 // including JQUERY HERE
+    $(
+        () => {
+            $("#send").click(() => {
+                addMessages({name: 'Tim', message: 'hello'})
+            })
+        }
+    )
 
+    function addMessages(message){
+        $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.body} </p>`)
+    }
+
+    
 </script>
 
 
