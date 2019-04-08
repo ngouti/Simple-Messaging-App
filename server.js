@@ -8,6 +8,8 @@ app.use(express.static(__dirname))
 app.use(bodyParser.json())
 // adding middleware; .json() lets body-parser know we expect json coming in with HTTP request
 
+app.use(bodyParser.urlencoded({extended: false}))
+
 var messages = [
     {name: 'Tim', message: 'Hi'},
     {name: 'Jane', message: 'Hello'}
