@@ -12,6 +12,7 @@ var messages = [
 app.get('/messages', (req, res) =>{
     res.send(messages)
 })
+// creates path localhost:3000/messages where variable message value can be seen
 
 var server = app.listen(3000, () => {
     console.log('server is listening on port', server.address().port)
