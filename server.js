@@ -31,6 +31,7 @@ app.post('/messages', (req, res) =>{
     // console.log(req.body)
     messages.push(req.body)
     io.emit('message', req.body)
+    // socket captures new posts
     res.sendStatus(200)
 })
 // in order to make a post request, use POSTMAN. Express doesn't have a body parser so use

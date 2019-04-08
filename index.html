@@ -41,6 +41,7 @@ var socket = io()
     })
 
     socket.on('message', addMessage)
+    // socket connection event
 
     function addMessage(message){
         $("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
